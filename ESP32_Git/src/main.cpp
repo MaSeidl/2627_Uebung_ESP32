@@ -1,16 +1,20 @@
 #include <Arduino.h>
-// Hier ist der Public-Bereich
+
+const int LED_Pin = 2;
 
 // Bekanntmachung
 float leseTemerpatur();
 
-// Hier ist der Setup Bereich
 void setup(){
+Serial.begin(15200);
+pinMode(LED_Pin, OUTPUT);
 
 }
 
 // Hier ist die Hauptschleife
 void loop(){
+    // Funktionen der Gruppe werden hier auferufen.
+    delay(1000);
     float temperatur = leseTemerpatur();
     Serial.print("Temperatur: ");
     Serial.println(temperatur, 1);
