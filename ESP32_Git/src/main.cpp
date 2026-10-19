@@ -14,11 +14,11 @@ pinMode(LED_Pin, OUTPUT);
 // Hier ist die Hauptschleife
 void loop(){
     // Funktionen der Gruppe werden hier auferufen.
-    delay(1000);
     float temperatur = leseTemerpatur();
     Serial.print("Temperatur: ");
     Serial.println(temperatur, 1);
     Serial.println(" C");
+    delay(1000);
 }
 
 /*
